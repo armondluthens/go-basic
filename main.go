@@ -25,8 +25,8 @@ type allEvents []event
 var events = allEvents{
 	{
 		ID:          "1",
-		Title:       "Introduction to Golang",
-		Description: "Come join us for a chance to learn how golang works and get to eventually try it out",
+		Title:       "golang rest",
+		Description: "desc.",
 	},
 }
 
@@ -98,7 +98,7 @@ func main() {
 	router.HandleFunc("/events/{id}", updateEvent).Methods("PATCH")
 	router.HandleFunc("/events/{id}", deleteEvent).Methods("DELETE")
 
-	var serverRunning = "Go server is running on port 8080"
+	var serverRunning = "Go server is running on port 8080."
 	fmt.Printf("%v\n", serverRunning)
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
